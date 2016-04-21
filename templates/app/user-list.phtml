@@ -1,0 +1,12 @@
+<?php $this->layout('layout::default', ['title' => 'Users']) ?>
+
+<div class="row">
+    <div class="col-md-12">
+        <?php
+        foreach ($users as $user) {
+            echo $this->e($user['name']) . " - " . 
+                $this->e($user['email']) . "<br><br>";
+        }
+        ?>
+    </div>
+</div>
