@@ -17,3 +17,7 @@ Sample Zend Expressive application created for a blastoff talk. This sample appl
 		* See /config/autoload/db.global.php and /config/autoload/db.local.php for DB adapter setup.
 		* See /config/autoload/routes.global.php for routing info.
 		* See /templates/app/user-list.phtml for view template.
+		
+    4. /src/App/Middleware/TheClacksMiddleware.php - Example of header middleware
+    
+        * See /config/autoload/middleware-pipeline.global.php for container update and middleware addition
