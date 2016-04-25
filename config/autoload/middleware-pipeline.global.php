@@ -4,10 +4,12 @@ use Zend\Expressive\Helper;
 
 return [
     'dependencies' => [
+        'invokables' => [
+            App\Middleware\TheClacksMiddleware::class => App\Middleware\TheClacksMiddleware::class,
+        ],
         'factories' => [
             Helper\ServerUrlMiddleware::class => Helper\ServerUrlMiddlewareFactory::class,
             Helper\UrlHelperMiddleware::class => Helper\UrlHelperMiddlewareFactory::class,
-            App\Middleware\TheClacksMiddleware::class => Zend\ServiceManager\Factory\InvokableFactory::class,
         ],
     ],
     // This can be used to seed pre- and/or post-routing middleware
