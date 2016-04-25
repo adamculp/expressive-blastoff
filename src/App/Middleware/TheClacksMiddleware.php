@@ -6,12 +6,14 @@ use Psr\Http\Message\ServerRequestInterface;
 
 class TheClacksMiddleware
 {
-    public function __invoke(ServerRequestInterface $request, 
-        ResponseInterface $response, 
+    public function __invoke(ServerRequestInterface $request,
+        ResponseInterface $response,
         callable $next = null)
     {
-        $response = $next($request, $response);
-        
+        if ($next) {
+            $response = $next($request, $response);
+        }
+
         return $response->withHeader('X-Clacks-Overhead',['GNU Terry Pratchett']);
     }
 }
