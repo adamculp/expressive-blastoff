@@ -10,6 +10,7 @@ return [
         'factories' => [
             App\Action\HomePageAction::class => App\Action\HomePageFactory::class,
             App\Action\UserListAction::class => App\Action\UserListFactory::class,
+            App\Action\UserDbalListAction::class => App\Action\UserDbalListFactory::class
         ],
     ],
     'routes' => [
@@ -29,6 +30,12 @@ return [
             'name' => 'user.list',
             'path' => '/users',
             'middleware' => App\Action\UserListAction::class,
+            'allowed_methods' => ['GET'],
+        ],
+        [
+            'name' => 'user.dbal.list',
+            'path' => '/users/dbal',
+            'middleware' => App\Action\UserDbalListAction::class,
             'allowed_methods' => ['GET'],
         ],
     ],

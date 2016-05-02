@@ -1,6 +1,6 @@
 # expressive-blastoff
 
-Sample Zend Expressive application created for a blastoff talk. This sample application includes the following.
+Sample Zend Expressive application created for a blastoff talk. This sample application includes the following:
 
 	1. /src/App/Action/PingAction.php - Shows basic usage as a REST service, and returns a JSON response.
 	
@@ -21,3 +21,10 @@ Sample Zend Expressive application created for a blastoff talk. This sample appl
     4. /src/App/Middleware/TheClacksMiddleware.php - Example of header middleware
     
         * See /config/autoload/middleware-pipeline.global.php for container update and middleware addition
+
+    5. /src/App/Action/UserDbalListFactory.php - Shows a connection to a Database using Doctrine DBAL to query a Sqlite database to return a list of profiles
+    
+        * See /config/autoload/dbal.local.php for DB settings.
+        * See /config/autoload/routes.global.php for routing info.
+        * See /templates/app/user-dbal-list.phtml for view template.
+        
