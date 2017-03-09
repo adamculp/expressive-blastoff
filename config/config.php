@@ -15,6 +15,7 @@ $aggregator = new ConfigAggregator([
     new ArrayProvider($cacheConfig),
 
     new PhpFileProvider('config/autoload/{{,*.}global,{,*.}local}.php'),
+    new PhpFileProvider('config/development.config.php'),
 ], $cacheConfig['config_cache_path']);
 
 return $aggregator->getMergedConfig();

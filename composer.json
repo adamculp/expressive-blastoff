@@ -19,7 +19,8 @@
     "phpunit/phpunit": "^4.8",
     "squizlabs/php_codesniffer": "^2.3",
     "zendframework/zend-component-installer": "^0.7.0",
-    "zendframework/zend-expressive-tooling": "^0.3.1"
+    "zendframework/zend-expressive-tooling": "^0.3.1",
+    "zfcampus/zf-development-mode": "^3.1"
   },
   "license" : "BSD-3-CLAUSE",
   "autoload-dev" : {
@@ -43,6 +44,9 @@
     "check" : [ "@cs", "@test" ],
     "cs" : "phpcs",
     "cs-fix" : "phpcbf",
+    "development-disable": "zf-development-mode disable",
+    "development-enable": "zf-development-mode enable",
+    "development-status": "zf-development-mode status",
     "serve" : "php -S 0.0.0.0:8080 -t public/ public/index.php",
     "test" : "phpunit"
   },
