@@ -1,13 +1,14 @@
 <?php
 namespace App\Action;
 
-use Psr\Http\Message\ResponseInterface;
+use Interop\Http\ServerMiddleware\DelegateInterface;
+use Interop\Http\ServerMiddleware\MiddlewareInterface;
 use Psr\Http\Message\ServerRequestInterface;
 use Zend\Diactoros\Response\HtmlResponse;
 use Zend\Expressive\Template;
 use Zend\Db\Adapter\Adapter;
 
-class UserListAction
+class UserListAction implements MiddlewareInterface
 {
     private $template;
     private $adapter;
@@ -18,9 +19,7 @@ class UserListAction
         $this->adapter = $adapter;
     }
 
-    public function __invoke(ServerRequestInterface $request, 
-        ResponseInterface $response, 
-        callable $next = null)
+    public function process(ServerRequestInterface $request, DelegateInterface $delegate)
     {
         $statement = $this->adapter->query('select * from profile');
         $users = $statement->execute();
