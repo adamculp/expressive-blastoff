@@ -1,22 +1,26 @@
 {
   "name" : "zendframework/zend-expressive-skeleton",
   "require" : {
-    "php" : "^5.5 || ^7.0",
-    "roave/security-advisories" : "dev-master",
-    "zendframework/zend-expressive" : "^1.0",
-    "zendframework/zend-expressive-helpers" : "^2.0",
-    "zendframework/zend-stdlib" : "~2.7",
-    "zendframework/zend-expressive-fastroute" : "^1.0",
-    "zendframework/zend-servicemanager" : "^2.7.3 || ^3.0",
-    "ocramius/proxy-manager" : "^1.0 || ^2.0",
-    "zendframework/zend-expressive-platesrenderer" : "^1.0",
-    "zendframework/zend-db": "2.8.*",
-    "doctrine/dbal": "2.5.*"
+    "php": "^5.5 || ^7.0",
+    "doctrine/dbal": "~2.5.0",
+    "ocramius/proxy-manager": "^1.0 || ^2.0",
+    "roave/security-advisories": "dev-master",
+    "zendframework/zend-config-aggregator": "^0.2.0",
+    "zendframework/zend-db": "~2.8.0",
+    "zendframework/zend-expressive": "^2.0",
+    "zendframework/zend-expressive-fastroute": "^2.0",
+    "zendframework/zend-expressive-helpers": "^3.0",
+    "zendframework/zend-expressive-platesrenderer": "^1.2",
+    "zendframework/zend-servicemanager": "^2.7.3 || ^3.0",
+    "zendframework/zend-stdlib": "^2.7 || ^3.0"
   },
   "require-dev" : {
-    "phpunit/phpunit" : "^4.8",
-    "squizlabs/php_codesniffer" : "^2.3",
-    "filp/whoops" : "^1.1 || ^2.0"
+    "filp/whoops": "^1.1 || ^2.0",
+    "phpunit/phpunit": "^4.8",
+    "squizlabs/php_codesniffer": "^2.3",
+    "zendframework/zend-component-installer": "^0.7.0",
+    "zendframework/zend-expressive-tooling": "^0.3.1",
+    "zfcampus/zf-development-mode": "^3.1"
   },
   "license" : "BSD-3-CLAUSE",
   "autoload-dev" : {
@@ -40,6 +44,9 @@
     "check" : [ "@cs", "@test" ],
     "cs" : "phpcs",
     "cs-fix" : "phpcbf",
+    "development-disable": "zf-development-mode disable",
+    "development-enable": "zf-development-mode enable",
+    "development-status": "zf-development-mode status",
     "serve" : "php -S 0.0.0.0:8080 -t public/ public/index.php",
     "test" : "phpunit"
   },
@@ -47,5 +54,8 @@
   "authors" : [ {
     "name" : "Geert Eltink",
     "homepage" : "https://xtreamwayz.com/"
-  } ]
+  } ],
+  "config": {
+    "sort-packages": true
+  }
 }

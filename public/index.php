@@ -10,9 +10,13 @@ if (php_sapi_name() === 'cli-server'
 chdir(dirname(__DIR__));
 require 'vendor/autoload.php';
 
-/** @var \Interop\Container\ContainerInterface $container */
-$container = require 'config/container.php';
+(function () {
+    /** @var \Interop\Container\ContainerInterface $container */
+    $container = require 'config/container.php';
 
-/** @var \Zend\Expressive\Application $app */
-$app = $container->get(\Zend\Expressive\Application::class);
-$app->run();
+    /** @var \Zend\Expressive\Application $app */
+    $app = $container->get(\Zend\Expressive\Application::class);
+    require 'config/pipeline.php';
+    require 'config/routes.php';
+    $app->run();
+})();
