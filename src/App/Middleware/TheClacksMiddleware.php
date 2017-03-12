@@ -9,7 +9,7 @@ class TheClacksMiddleware implements MiddlewareInterface
 {
     public function process(ServerRequestInterface $request, DelegateInterface $delegate)
     {
-        $response = $delegate($request);
+        $response = $delegate->process($request);
         
         return $response->withHeader('X-Clacks-Overhead', ['GNU Terry Pratchett']);
     }
