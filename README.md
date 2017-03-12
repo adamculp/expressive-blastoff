@@ -1,18 +1,21 @@
 # expressive-blastoff
 
-Sample Zend Expressive application created for a blastoff talk. This sample application includes the following: (scroll down to see installation instructions.)
+Sample Zend Expressive application created for a blastoff talk. This sample application includes the following: (scroll 
+down to see installation instructions.)
 
 	1. /src/App/Action/PingAction.php - Shows basic usage as a REST service, and returns a JSON response.
 	
 		* See /config/autoload/routes.global.php for routing info.
 		* No view template to view, raw JSON returned.
 
-	2. /src/App/Action/HomePageFactory.php - Shows basic usage with a template system (Plates), where and HTML response is returned.
+	2. /src/App/Action/HomePageFactory.php - Shows basic usage with a template system (Plates), where and HTML response 
+	is returned.
 	
 		* See /config/autoload/routes.global.php for routing info.
 		* See /templates/app/home-page.phtml for view template.
 	
-	3. /src/App/Action/UserListFactory.php - Shows a connection to a Database using Zend-Db to query a Sqlite database to return a list of profiles
+	3. /src/App/Action/UserListFactory.php - Shows a connection to a Database using Zend-Db to query a Sqlite database 
+	to return a list of profiles
 	
 		* See /config/autoload/db.global.php and /config/autoload/db.local.php for DB adapter setup.
 		* See /config/autoload/routes.global.php for routing info.
@@ -22,7 +25,8 @@ Sample Zend Expressive application created for a blastoff talk. This sample appl
     
         * See /config/autoload/middleware-pipeline.global.php for container update and middleware addition
 
-    5. /src/App/Action/UserDbalListFactory.php - Shows a connection to a Database using Doctrine DBAL to query a Sqlite database to return a list of profiles
+    5. /src/App/Action/UserDbalListFactory.php - Shows a connection to a Database using Doctrine DBAL to query a Sqlite 
+    database to return a list of profiles
     
         * See /config/autoload/dbal.local.php for DB settings.
         * See /config/autoload/routes.global.php for routing info.
@@ -30,7 +34,8 @@ Sample Zend Expressive application created for a blastoff talk. This sample appl
 
 ## Docker Instance
 
-    1. Ensure you have the latest version of Docker and Docker-Compose installed. If you have an older version you may see strange messages related to the Version.
+    1. Ensure you have the latest version of Docker and Docker-Compose installed. If you have an older version you may 
+    see strange messages related to the Version.
     
     2. Via CLI navigate to the application root directory and issue the command to deploy and run a Docker container:
     
@@ -38,7 +43,8 @@ Sample Zend Expressive application created for a blastoff talk. This sample appl
         $ docker-compose up -d
 ```
         
-    3. When that completes you should have a "working" Docker container. In a browser navigate to http://localhost:8080 to test. There should be errors because Composer needs to be run.
+    3. When that completes you should have a "working" Docker container. In a browser navigate to http://localhost:8080 
+    to test. There should be errors because Composer needs to be run.
     
     4. Capture a terminal in the Docker container:
     
@@ -59,3 +65,5 @@ Sample Zend Expressive application created for a blastoff talk. This sample appl
     6. We now have a working application.
 
 ## Vagrant usage
+
+Coming soon
